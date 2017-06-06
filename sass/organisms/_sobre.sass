@@ -1,0 +1,56 @@
+section.sobre
+	.itens
+		margin: 50px 0 50px 0
+		+flexbox
+		+align-items(center)
+		+justify-content(space-around)
+		+make-sm-column(10)
+		+make-sm-column-offset(1)
+
+		.foto
+			+order(3)
+			+breakpoint($tablet)
+				margin: 0 0 30px
+
+		+breakpoint($tablet)
+			display: block
+		
+		text-align: center
+
+
+			
+
+		[class^="icone_"]
+			width: 42px
+			heigth: 42px
+			background-color: $azul
+			+border-radius(120px)
+			text-align: center
+			line-heigth: 85px
+			color: $magenta
+			font-size: 24pt
+
+			+breakpoint($tablet)
+				display: inline-block
+
+			&.icone_lapis
+				+order(1)
+			&.icone_code
+				+order(2)
+			&.icone_core
+				+order(4)
+			&.icone_apple
+				+order(5)
+
+
+	.textos
+		+make-sm-column(8)
+		+make-sm-column-offset(2)
+		text-align: center
+		font-size: 30pt
+
+
+	.botao
+		display: table
+		margin: 30px auto
+
